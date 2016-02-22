@@ -1,3 +1,17 @@
+<!--- 
+File: Base.cfc
+Purpose: Holds shared utilities in the entire app.
+By: Joelle Torneros
+Created: 2/22/2016
+
+Usage: usage
+
+Modification Log:
+Date            Action
+==========================================
+
+--->
+
 <cfcomponent hint="Shared Utilities" output="false">
 
 <cffunction name="generatePassword" returntype="string" access="public" hint="Generate a 5 character random password">

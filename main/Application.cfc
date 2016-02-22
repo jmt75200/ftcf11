@@ -1,3 +1,17 @@
+<!--- 
+File: Application.cfc
+Purpose: Controls the functions for main app.
+By: Joelle Torneros
+Created: 2/18/2016
+
+Usage: usage
+
+Modification Log:
+Date            Action
+==========================================
+
+--->
+
 <cfcomponent output="false">
   <cfset this.name = "ProposalManager">
   <cfset this.datasource = "proposalmanager">

@@ -1,3 +1,17 @@
+<!--- 
+File: Login.cfc
+Purpose: Components for Login & Authorization
+By: Joelle Torneros
+Created: 2/22/2016
+
+Usage: usage
+
+Modification Log:
+Date            Action
+==========================================
+
+--->
+
 <cfcomponent hint="User Auth" extends="Base" output="false">
   <cffunction name="Login" access="public" hint="Authenticate User"
     returntype="boolean">
