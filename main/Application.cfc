@@ -37,5 +37,9 @@ Date            Action
     <cfif isDefined("url.init")>
       <cfset onApplicationStart()>
     </cfif>
+    <!--- Restricts access to admin folder. User must be logged in. --->
+    <cfif getAuthUser() is "" and arguments.targetpage contains "/admin">
+      <cflocation url="#application.basehref#login/index.cfm">
+    </cfif>
   </cffunction>
 </cfcomponent>

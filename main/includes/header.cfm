@@ -57,8 +57,13 @@ Date            Action
     <h1>Proposal Manager</h1>
     <nav>
       <cfoutput>
+        <cfif getAuthUser() is "">
+          <a href="#application.basehref#login/index.cfm">Login</a>
+        </cfif>
         <cfloop array="#variables.nav#" index="thisLink">
+          <cfif thisLink.roles is "" or isUserInAnyRole(thisLink.roles)>
           <a href="#application.basehref##thisLink.url#">#thisLink.label#</a>
+          </cfif>
         </cfloop>
       </cfoutput>
     </nav>

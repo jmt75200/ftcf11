@@ -14,12 +14,18 @@ Date        Action
 --->
 <cfinclude template="includes/functions.cfm">
 
-<cfset pagetitle = "Welcome to ProposalManager">
+<cfset pagetitle = "Welcome to Proposal Manager">
 
 <cfinclude  template="includes/header.cfm">
   <!-- Inside Main Div -->
-  <cfoutput>
-    Let's Test It! Your random password is:
-    #generatePassword(10)#
-  </cfoutput>
+  <h1>Aloha
+    <cfif getAuthUser() is not "">
+      <cfoutput>, #getAuthUser()#</cfoutput>
+    </cfif>!
+  </h1>
 <cfinclude  template="includes/footer.cfm">
+
+
+
+<!-- Let's Test It! Your random password is:
+    #generatePassword(10)# -->

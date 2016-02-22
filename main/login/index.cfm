@@ -13,6 +13,16 @@ Date            Action
 --->
 
 <cfmodule template="../includes/header.cfm" pagetitle="Authenticate!">
+
+<!--- Invoke Login Method in components/Login.cfc --->
+<cfif isDefined("form.btnSubmit")>
+  <cfif application.cfc.login.Login(form.username, form.password)>
+    <cflocation url="../index.cfm">
+  <cfelse>
+    Authentication failed - Please Try Again!
+  </cfif>
+</cfif>
+
 <cfform preservedata = true>
   <label for="username">User name:</label>
   <cfinput type="text"
